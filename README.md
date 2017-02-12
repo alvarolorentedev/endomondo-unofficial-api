@@ -96,7 +96,7 @@ var workoutGet = require('endomondo-unofficial-api').workout.get
 var token = 'authToken'
 var workoutId = 'workoutId'
 
-workoutGet.get({authToken: token, workoutId: workoutId})
+workoutGet({authToken: token, workoutId: workoutId})
     .then((result) => { console.log(result) })
     .catch((result) => console.log(result))
 
@@ -129,7 +129,7 @@ var workoutSet = require('endomondo-unofficial-api').workout.set
 var token = 'authToken'
 var userId = 'userId'
 
-workoutGet.get({authToken: token, userId: userId, time: Date.now()-70, duration: 60, distance: 0.05 })
+workoutSet({authToken: token, userId: userId, time: Date.now()-70, duration: 60, distance: 0.05 })
     .then((result) => { console.log(result) })
     .catch((result) => console.log(result))
 
