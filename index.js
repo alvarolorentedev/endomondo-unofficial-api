@@ -1,7 +1,9 @@
 'use strict'
 
-var authenticate = require('./lib/authentication')
+const authenticate = require('./lib/authentication'),
+    workouts = require('./lib/workouts')
 
 module.exports= {
-    authenticate: authenticate
+    authenticate: authenticate,
+    workouts: workouts
 }

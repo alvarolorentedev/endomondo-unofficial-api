@@ -4,8 +4,10 @@
   "description": "endomondo unofficial api access",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "example": "node ./example/example.js"
   },
+  "keywords": ["endomondo", "sports", "unofficial", "api"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanekotic/endomondo-unofficial-api.git"
