@@ -27,7 +27,7 @@ authenticate({email: <email>, password: <password>})
 
 The result of the promise will be if failed the error that caused it and if success an result object similar to this:
 
-```json
+```
 { 
   authToken: <token>,
   measure: <mesure unit>,
