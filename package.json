@@ -1,0 +1,23 @@
+{
+  "name": "endomondo-unofficial-api",
+  "version": "0.0.1",
+  "description": "endomondo unofficial api access",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanekotic/endomondo-unofficial-api.git"
+  },
+  "author": "kanekotic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kanekotic/endomondo-unofficial-api/issues"
+  },
+  "homepage": "https://github.com/kanekotic/endomondo-unofficial-api#readme",
+  "dependencies": {
+    "request": "^2.79.0",
+    "uuidv5": "^1.0.0"
+  }
+}
