@@ -86,6 +86,81 @@ The result of the promise will be if failed the error that caused it and if succ
 }
 ```
 
+### Workout (get)
+
+Get a specific workout. The next snippet describes an example of the call:
+
+```js
+var workoutGet = require('endomondo-unofficial-api').workout.get
+
+var token = 'authToken'
+var workoutId = 'workoutId'
+
+workoutGet.get({authToken: token, workoutId: workoutId})
+    .then((result) => { console.log(result) })
+    .catch((result) => console.log(result))
+
+```
+
+the complete set of parameters are determined by:
+```
+{
+    workoutId: params.id,
+    sport: params.sport || 0,
+    duration: params.duration || 0,
+    gzip: params.gzip || true,
+    audioMessage: params.audioMessage || false,
+    goalType: params.goalType || 'BASIC',
+    extendedResponse: params.extendedResponse || undefined,
+    calories: params.calories || undefined,
+    hydration: params.hydration || undefined
+}
+```
+
+The result of the promise will be if failed the error that caused it and if success an result object that is quite complex to describe just try it ;) .
+
+### Workout (set)
+
+Set (or create) a specific workout. The next snippet describes an example of the call:
+
+```js
+var workoutSet = require('endomondo-unofficial-api').workout.set
+
+var token = 'authToken'
+var userId = 'userId'
+
+workoutGet.get({authToken: token, userId: userId, time: Date.now()-70, duration: 60, distance: 0.05 })
+    .then((result) => { console.log(result) })
+    .catch((result) => console.log(result))
+
+```
+
+the complete set of parameters are determined by:
+```
+{
+    authToken: params.authToken,
+    duration: params.duration,
+    trackPoints: [ { dateTime, inst, latitude, longitude, distance, speed, altitude, heartRate }],
+    workoutId: params.workoutId || Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+}
+```
+or 
+```
+{
+    authToken: params.authToken,
+    duration: params.duration,
+    time: params.time, 
+    distance: params.distance,
+    workoutId: params.workoutId || Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+}
+```
+
+The result of the promise will be if failed the error that caused it and if success an result object like this:
+
+```
+{ workoutId: <workoutId> }
+```
+
 ## Thanks
 
 Special thanks to @aperezm85 whos code was used as inspiration for this package.
