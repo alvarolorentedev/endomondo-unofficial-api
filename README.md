@@ -27,13 +27,24 @@ authenticate({email: <email>, password: <password>})
 
 The result of the promise will be if failed the error that caused it and if success an result object similar to this:
 
-```
-
+```json
+{ 
+  authToken: <token>,
+  measure: <mesure unit>,
+  displayName: <user name>,
+  userId: <user id>,
+  facebookConnected: <true|false>,
+  secureToken: <token> 
+}
 ```
 
 ## Disclaimer
 
 This is not affiliated or endorset by Endomondo, or any other party. If you are copying this for a commercial project, be aware that it might be so that clean room implementation rules aren't fully complied with.
+
+## Thanks
+
+Special thanks to @aperezm85 whos code was used as inspiration for this package.
 
 ### Logo 
 
