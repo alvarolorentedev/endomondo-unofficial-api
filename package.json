@@ -1,13 +1,18 @@
 {
   "name": "endomondo-unofficial-api",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "endomondo unofficial api access",
   "main": "index.js",
   "scripts": {
     "start": "node .",
     "example": "node ./example/example.js"
   },
-  "keywords": ["endomondo", "sports", "unofficial", "api"],
+  "keywords": [
+    "endomondo",
+    "sports",
+    "unofficial",
+    "api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kanekotic/endomondo-unofficial-api.git"
