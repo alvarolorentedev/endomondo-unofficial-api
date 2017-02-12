@@ -54,10 +54,12 @@ The result of the promise will be if failed the error that caused it and if succ
 Get a list of your workouts. The next snippet describes an example of the call:
 
 ```js
-var authenticate = require('endomondo-unofficial-api').workouts
+var workouts = require('endomondo-unofficial-api').workouts
 
-authenticate({authToken: <token>})
-    .then((result) => console.log(result))
+var token = 'authToken'
+
+workouts({authToken: token})
+    .then((result) => { console.log(result) })
     .catch((result) => console.log(result))
 
 ```
