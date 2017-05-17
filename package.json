@@ -26,6 +26,7 @@
   "dependencies": {
     "moment": "^2.17.1",
     "request": "^2.79.0",
-    "uuidv5": "^1.0.0"
+    "uuidv5": "^1.0.0",
+    "gpx-parse": "^0.10.4"
   }
 }
