@@ -5,7 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "example": "node ./example/example.js"
+    "example": "node ./example/example.js",
+    "test": "jest",
+    "test:dev": "jest --watchAll test/lib",
+    "test:int": "jest test/integration",
+    "test:cov": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "push": "yarn test && git push",
+    "deploy:major": "yarn version --major",
+    "deploy:minor": "yarn version --minor",
+    "deploy:patch": "yarn version --patch",
+    "deploy:push": "git push && git push --tags",
+    "preversion": "yarn test"
   },
   "keywords": [
     "endomondo",
@@ -24,8 +34,21 @@
   },
   "homepage": "https://github.com/kanekotic/endomondo-unofficial-api#readme",
   "dependencies": {
-    "moment": "^2.17.1",
-    "request": "^2.79.0",
-    "uuidv5": "^1.0.0"
+    "moment": "2.22.2",
+    "request": "2.88.0",
+    "uuid": "3.3.2",
+    "uuidv5": "1.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "3.0.2",
+    "faker": "4.1.0",
+    "jest": "23.5.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*-test.js"
+    ],
+    "testEnvironment": "node",
+    "automock": false
   }
 }
