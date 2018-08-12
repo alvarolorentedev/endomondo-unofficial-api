@@ -7,7 +7,7 @@
     "start": "node .",
     "example": "node ./example/example.js",
     "test": "jest",
-    "test:dev": "jest --watchAll test/lib",
+    "test:dev": "jest --watchAll test/unit",
     "test:int": "jest test/integration",
     "test:cov": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "push": "yarn test && git push",

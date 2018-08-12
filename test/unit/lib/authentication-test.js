@@ -1,4 +1,4 @@
-jest.mock('../../lib/common', () => ({
+jest.mock('../../../lib/common', () => ({
     urls: {
         api: 'https://api.mobile.endomondo.com/',
         paths: {
@@ -21,10 +21,10 @@ jest.mock('../../lib/common', () => ({
 jest.mock('request-promise-native', () => ({ get: jest.fn() }))
 jest.mock('uuid/v1', () => jest.fn())
 
-const authenticate = require('../../lib/authentication'),
+const authenticate = require('../../../lib/authentication'),
     faker = require('faker'),
     request = require('request-promise-native'),
-    common = require('../../lib/common'),
+    common = require('../../../lib/common'),
     uuid = require('uuid/v1')
 
 describe('authenticate should', () => {    

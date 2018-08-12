@@ -1,4 +1,4 @@
-const common = require('../../lib/common'),
+const common = require('../../../lib/common'),
     faker = require('faker')
 
 describe('common should', () => {

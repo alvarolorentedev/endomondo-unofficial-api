@@ -1,4 +1,4 @@
-jest.mock('../../lib/common', () => ({
+jest.mock('../../../lib/common', () => ({
     urls: {
         api: 'https://api.mobile.endomondo.com/',
         paths: {
@@ -20,10 +20,10 @@ jest.mock('request-promise-native', () => ({
     post: jest.fn() 
 }))
 
-const workout = require('../../lib/workout'),
+const workout = require('../../../lib/workout'),
     faker = require('faker'),
     request = require('request-promise-native'),
-    common = require('../../lib/common'),
+    common = require('../../../lib/common'),
     moment = require('moment')    
 
 describe('workout should', () => {    
