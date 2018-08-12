@@ -1,4 +1,3 @@
-
 const common = require('../../lib/common'),
     faker = require('faker')
 
