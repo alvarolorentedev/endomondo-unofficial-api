@@ -2,12 +2,7 @@ jest.mock('../../lib/common', () => ({
     urls: {
         api: 'https://api.mobile.endomondo.com/',
         paths: {
-            auth: 'mobile/auth',
-            activitiesList: 'mobile/api/workout/list',
-            activity: {
-                get: 'mobile/api/workout/get',
-                post: 'mobile/track'
-            }
+            auth: 'mobile/auth'
         }
     },
     regex: {
