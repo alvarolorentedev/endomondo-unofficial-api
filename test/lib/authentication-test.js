@@ -24,14 +24,17 @@ jest.mock('../../lib/common', () => ({
     handleError: jest.fn()
 }))
 jest.mock('request-promise-native', () => ({ get: jest.fn() }))
+jest.mock('uuid/v1', () => jest.fn())
 
 const authenticate = require('../../lib/authentication'),
     faker = require('faker'),
     request = require('request-promise-native'),
-    common = require('../../lib/common')
+    common = require('../../lib/common'),
+    uuid = require('uuid/v1')
 
 describe('authenticate should', () => {    
     beforeEach(() => {
+        uuid.mockReturnValue(faker.random.uuid())
         request.get.mockClear()
         request.get.mockImplementation(() => 
         `
@@ -82,6 +85,15 @@ describe('authenticate should', () => {
         await expect(request.get.mock.calls[0][0].qs.action).toEqual('pair')
     })
 
+    test('request get is called with default parameter for uuid', async () => {
+        let expected = faker.random.uuid()
+        uuid.mockReturnValue(expected)
+
+        authenticate({})
+
+        await expect(request.get.mock.calls[0][0].qs.deviceId).toEqual(expected)
+    })
+
     test('request get response is not Ok', async () => {
         let expected = faker.random.uuid()
         common.handleError.mockReturnValue(expected)
@@ -118,23 +130,3 @@ describe('authenticate should', () => {
         })
     })
 })
-// function authenticate(params){
-    //     return new Promise((resolve, reject) =>{
-    //         var qs = getQueryString(params)
-    //         var url = apiUrl + paths.auth
-    
-    //         request.get({ url:url, qs:qs }, (err, response, body) => {
-    //             if (err || !regex.isOk.test(body))
-    //                 reject(handleError(err))
-    //             else
-    //                 resolve({
-    //                         authToken: regex.authToken.exec(body)[1],
-    //                         measure: regex.measure.exec(body)[1],
-    //                         displayName: regex.displayName.exec(body)[1],
-    //                         userId: regex.userId.exec(body)[1],
-    //                         facebookConnected: regex.facebookConnected.exec(body)[1],
-    //                         secureToken: regex.secureToken.exec(body)[1],
-    //                 })
-    //         })
-    //     })
-    // }
