@@ -1,5 +1,10 @@
 # ![logomakr_7drp6q](https://cloud.githubusercontent.com/assets/3071208/22858608/36797c5e-f088-11e6-9821-ad926355ff05.png)
-
+[![Build Status](https://travis-ci.org/kanekotic/endomondo-unofficial-api.svg?branch=master)](https://travis-ci.org/kanekotic/endomondo-unofficial-api)
+[![Coverage Status](https://coveralls.io/repos/github/kanekotic/endomondo-unofficial-api/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/endomondo-unofficial-api?branch=master)
+[![npm](https://img.shields.io/npm/dt/endomondo-unofficial-api.svg)](https://github.com/kanekotic/raw-guid-converter)
+[![GitHub license](https://img.shields.io/github/license/kanekotic/raw-guid-converter.svg)](https://github.com/kanekotic/raw-guid-converter/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/raw-guid-converter/graphs/commit-activity)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
 This is a promise based unofficial endomondo api.
 
 ## installation 
