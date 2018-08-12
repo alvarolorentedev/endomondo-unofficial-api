@@ -78,7 +78,7 @@ describe('workout should', () => {
             points: []
         }
         await workout.set(params)
-        expect(request.post.mock.calls[0][0].url).toEqual(`${common.urls.api}${common.urls.paths.activity.set}`)
+        expect(request.post.mock.calls[0][0].url).toEqual(`${common.urls.api}${common.urls.paths.activity.post}`)
     })
 
     test('request post is called with auto-generated workoutId', async () => {
