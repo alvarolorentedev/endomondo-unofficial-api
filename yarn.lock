@@ -2536,7 +2536,7 @@ request-promise-native@1.0.5, request-promise-native@^1.0.5:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@2.88.0, request@^2.85.0, request@^2.87.0:
+request@^2.85.0, request@^2.87.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   dependencies:
@@ -3040,10 +3040,6 @@ util.promisify@^1.0.0:
 uuid@3.3.2, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
-
-uuidv5@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/uuidv5/-/uuidv5-1.0.0.tgz#af98e9befcb462c0ab6c752edd082cb52fb530a0"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
