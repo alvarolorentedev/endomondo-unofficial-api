@@ -25,6 +25,11 @@ describe('workouts should', () => {
         expect(request.get.mock.calls[0][0].url).toEqual(`${common.urls.api}${common.urls.paths.activitiesList}`)
     })
 
+    test('request get is called with correct json parameter', async () => {
+        await workouts({})
+        expect(request.get.mock.calls[0][0].json).toEqual(true)
+    })
+
     test('request get is called with correct query parameters if all passed', async () => {
         let params = {
             authToken: faker.random.uuid(),
@@ -43,7 +48,7 @@ describe('workouts should', () => {
 
     test('request get returns parsed json result', async () => {
         let expectedResult = { something : faker.random.uuid() }
-        request.get.mockReturnValue(Promise.resolve(JSON.stringify(expectedResult)))
+        request.get.mockReturnValue(Promise.resolve(expectedResult))
         let result = await workouts({})
         expect(result).toEqual(expectedResult)
     })
