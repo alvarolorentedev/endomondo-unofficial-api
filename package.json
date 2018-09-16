@@ -41,7 +41,7 @@
   "devDependencies": {
     "coveralls": "3.0.2",
     "faker": "4.1.0",
-    "jest": "23.5.0"
+    "jest": "23.6.0"
   },
   "jest": {
     "testMatch": [
