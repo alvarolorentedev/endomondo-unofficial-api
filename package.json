@@ -1,6 +1,6 @@
 {
   "name": "endomondo-unofficial-api",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "endomondo unofficial api access",
   "main": "index.js",
   "scripts": {
