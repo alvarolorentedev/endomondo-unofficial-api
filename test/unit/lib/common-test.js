@@ -10,6 +10,7 @@ describe('common should', () => {
                 activitiesList: 'mobile/api/workout/list',
                 activity: {
                     get: 'mobile/api/workout/get',
+                    delete: 'mobile/api/workout/delete',
                     post: 'mobile/track'
                 }
             }
