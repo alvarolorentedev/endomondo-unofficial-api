@@ -4,6 +4,7 @@ jest.mock('../../../lib/common', () => ({
         paths: {
             activity: {
                 get: 'mobile/api/workout/get',
+                delete: 'mobile/api/workout/delete',       
                 post: 'mobile/track'
             }
         }
@@ -17,6 +18,7 @@ jest.mock('../../../lib/common', () => ({
 }))
 jest.mock('request-promise-native', () => ({ 
     get: jest.fn(), 
+    delete: jest.fn(), 
     post: jest.fn() 
 }))
 
@@ -30,6 +32,8 @@ describe('workout should', () => {
     beforeEach(() => {
         request.get.mockClear()
         request.get.mockImplementation(() => `{}`)
+        request.delete.mockClear()
+        request.delete.mockImplementation(() => `{}`)
         request.post.mockClear()
         request.post.mockImplementation(() => `OK\n`)
     })
@@ -67,6 +71,34 @@ describe('workout should', () => {
         let expectedResult = { something : faker.random.uuid() }
         request.get.mockReturnValue(Promise.resolve(expectedResult))
         let result = await workout.get({})
+        expect(result).toEqual(expectedResult)
+    })
+
+    test('request delete is called with correct url', async () => {
+        await workout.remove({})
+        expect(request.delete.mock.calls[0][0].url).toEqual(`${common.urls.api}${common.urls.paths.activity.delete}`)
+    })
+
+    test('request delete is called with correct json parameter', async () => {
+        await workout.remove({})
+        expect(request.delete.mock.calls[0][0].json).toEqual(true)
+    })
+
+    test('request delete is called with correct query parameters if all passed', async () => {
+        let params = {
+            authToken: faker.random.uuid(),
+            workoutId: faker.random.uuid()
+        }
+
+        await workout.remove(params)
+
+        expect(request.delete.mock.calls[0][0].qs).toEqual(params)
+    })
+
+    test('request delete returns json result', async () => {
+        let expectedResult = { data : 'OK' }
+        request.delete.mockReturnValue(Promise.resolve(expectedResult))
+        let result = await workout.remove({})
         expect(result).toEqual(expectedResult)
     })
 
