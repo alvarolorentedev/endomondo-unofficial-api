@@ -35,7 +35,7 @@
   "homepage": "https://github.com/kanekotic/endomondo-unofficial-api#readme",
   "dependencies": {
     "moment": "2.24.0",
-    "request-promise-native": "1.0.7",
+    "request-promise-native": "1.0.8",
     "uuid": "3.3.3"
   },
   "devDependencies": {
