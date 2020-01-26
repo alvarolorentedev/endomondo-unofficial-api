@@ -39,9 +39,9 @@
     "uuid": "3.4.0"
   },
   "devDependencies": {
-    "codecov": "3.6.1",
+    "codecov": "3.6.2",
     "faker": "4.1.0",
-    "jest": "24.9.0"
+    "jest": "25.1.0"
   },
   "jest": {
     "testMatch": [
