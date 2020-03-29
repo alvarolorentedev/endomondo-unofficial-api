@@ -41,7 +41,7 @@
   "devDependencies": {
     "codecov": "3.6.5",
     "faker": "4.1.0",
-    "jest": "25.1.0"
+    "jest": "25.2.4"
   },
   "jest": {
     "testMatch": [
