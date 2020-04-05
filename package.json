@@ -36,12 +36,12 @@
   "dependencies": {
     "moment": "2.24.0",
     "request-promise-native": "1.0.8",
-    "uuid": "7.0.2"
+    "uuid": "7.0.3"
   },
   "devDependencies": {
     "codecov": "3.6.5",
     "faker": "4.1.0",
-    "jest": "25.2.4"
+    "jest": "25.2.7"
   },
   "jest": {
     "testMatch": [
