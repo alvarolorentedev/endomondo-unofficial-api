@@ -50,8 +50,7 @@ The result of the promise will be if failed the error that caused it and if succ
   measure: <mesure unit>,
   displayName: <user name>,
   userId: <user id>,
-  facebookConnected: <true|false>,
-  secureToken: <token> 
+  facebookConnected: <true|false>
 }
 ```
 
