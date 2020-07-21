@@ -39,7 +39,7 @@
     "uuid": "7.0.3"
   },
   "devDependencies": {
-    "codecov": "3.6.5",
+    "codecov": "3.7.1",
     "faker": "4.1.0",
     "jest": "25.4.0"
   },
