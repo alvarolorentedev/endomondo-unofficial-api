@@ -1,8 +1,8 @@
 const index = require('../../index'),
     { faker } = require('@faker-js/faker')
 
-describe.skip('integration should', () => {
-    test('can authenticate and retrieve data', async () => {
+describe('integration should', () => {
+    test.skip('can authenticate and retrieve data', async () => {
         let params = {
             email: process.env.ENDOMONDO_EMAIL,
             password: process.env.ENDOMONDO_PASSWORD,
