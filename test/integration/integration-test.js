@@ -1,7 +1,7 @@
 const index = require('../../index'),
     faker = require('faker')
 
-describe('integration should', () => {
+describe.skip('integration should', () => {
     test('can authenticate and retrieve data', async () => {
         let params = {
             email: process.env.ENDOMONDO_EMAIL,
