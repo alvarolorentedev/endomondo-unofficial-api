@@ -95,7 +95,6 @@ describe('authenticate should', () => {
     })
 
     test('request get response should return mapped object', async () => {
-        let facebookConnected= faker.datatype.uuid()
         let authToken= faker.datatype.uuid()
         let measure= faker.datatype.uuid()
         let displayName= faker.datatype.uuid()
