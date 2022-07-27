@@ -34,14 +34,14 @@
   },
   "homepage": "https://github.com/kanekotic/endomondo-unofficial-api#readme",
   "dependencies": {
-    "moment": "2.24.0",
-    "request-promise-native": "1.0.8",
-    "uuid": "7.0.3"
+    "moment": "2.29.4",
+    "request-promise-native": "1.0.9",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
-    "codecov": "3.6.5",
-    "faker": "4.1.0",
-    "jest": "25.4.0"
+    "@faker-js/faker": "^7.3.0",
+    "codecov": "3.8.3",
+    "jest": "28.1.3"
   },
   "jest": {
     "testMatch": [

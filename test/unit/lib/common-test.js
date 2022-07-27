@@ -1,5 +1,5 @@
 const common = require('../../../lib/common'),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 describe('common should', () => {
     test('export urls for the service', async () => {
@@ -38,7 +38,7 @@ describe('common should', () => {
     })
 
     test('handle error should use same error than passed', async () => {
-        let errorExpected = faker.random.uuid()
+        let errorExpected = faker.datatype.uuid()
         let error = common.handleError(errorExpected)
         expect(error).toEqual(errorExpected)
     })

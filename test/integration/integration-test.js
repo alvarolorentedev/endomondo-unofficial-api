@@ -1,5 +1,5 @@
 const index = require('../../index'),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 describe.skip('integration should', () => {
     test('can authenticate and retrieve data', async () => {
