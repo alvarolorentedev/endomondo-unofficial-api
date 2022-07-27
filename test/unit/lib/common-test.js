@@ -31,8 +31,7 @@ describe('common should', () => {
             measure: /measure=(.*?)\n/,
             displayName: /displayName=(.*?)\n/,
             userId: /userId=(.*?)\n/,
-            facebookConnected: /facebookConnected=(.*?)\n/,
-            secureToken: /secureToken=(.*?)\n/
+            facebookConnected: /facebookConnected=(.*?)\n/
         }
         expect(common.regex.auth).toEqual(expectedAuthRegex)
     })

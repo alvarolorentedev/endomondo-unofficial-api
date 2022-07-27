@@ -12,8 +12,7 @@ jest.mock('../../../lib/common', () => ({
             measure: /measure=(.*?)\n/,
             displayName: /displayName=(.*?)\n/,
             userId: /userId=(.*?)\n/,
-            facebookConnected: /facebookConnected=(.*?)\n/,
-            secureToken: /secureToken=(.*?)\n/
+            facebookConnected: /facebookConnected=(.*?)\n/
         }
     },
     handleError: jest.fn()
@@ -39,7 +38,6 @@ describe('authenticate should', () => {
         displayName=pepe\n
         userId=pepe\n
         facebookConnected=pepe\n
-        secureToken=pepe\n
         `)
 
     })
@@ -110,7 +108,6 @@ describe('authenticate should', () => {
         displayName=${displayName}\n
         userId=${userId}\n
         facebookConnected=${facebookConnected}\n
-        secureToken=${secureToken}\n
         `)
 
         let result = await authenticate({})
@@ -120,8 +117,7 @@ describe('authenticate should', () => {
             measure: measure,
             displayName: displayName,
             userId: userId,
-            facebookConnected: facebookConnected,
-            secureToken: secureToken,
+            facebookConnected: facebookConnected
         })
     })
 })
