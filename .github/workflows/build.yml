@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-
+  pull_request:
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -25,6 +25,7 @@ jobs:
       - name: test
         run: yarn test:cov
       - uses: mikeal/merge-release@master
+        if: github.event_name != 'pull_request'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
