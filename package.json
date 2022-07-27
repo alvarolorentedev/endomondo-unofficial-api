@@ -1,6 +1,6 @@
 {
   "name": "endomondo-unofficial-api",
-  "version": "1.0.30",
+  "version": "1.0.87",
   "description": "endomondo unofficial api access",
   "main": "index.js",
   "scripts": {
@@ -34,14 +34,15 @@
   },
   "homepage": "https://github.com/kanekotic/endomondo-unofficial-api#readme",
   "dependencies": {
-    "moment": "2.24.0",
-    "request-promise-native": "1.0.7",
-    "uuid": "3.3.2"
+    "moment": "2.29.4",
+    "request": "^2.88.2",
+    "request-promise-native": "1.0.9",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
-    "codecov": "3.2.0",
-    "faker": "4.1.0",
-    "jest": "24.3.1"
+    "@faker-js/faker": "^7.3.0",
+    "codecov": "3.8.3",
+    "jest": "28.1.3"
   },
   "jest": {
     "testMatch": [

@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "toralux",
+      "name": "Tor Anders Johansen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/422309?v=4",
+      "profile": "https://www.toranders.com",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "endomondo-unofficial-api",
+  "projectOwner": "kanekotic",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

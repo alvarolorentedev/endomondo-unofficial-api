@@ -1,5 +1,5 @@
 const common = require('../../../lib/common'),
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 describe('common should', () => {
     test('export urls for the service', async () => {
@@ -32,14 +32,13 @@ describe('common should', () => {
             measure: /measure=(.*?)\n/,
             displayName: /displayName=(.*?)\n/,
             userId: /userId=(.*?)\n/,
-            facebookConnected: /facebookConnected=(.*?)\n/,
-            secureToken: /secureToken=(.*?)\n/
+            facebookConnected: /facebookConnected=(.*?)\n/
         }
         expect(common.regex.auth).toEqual(expectedAuthRegex)
     })
 
     test('handle error should use same error than passed', async () => {
-        let errorExpected = faker.random.uuid()
+        let errorExpected = faker.datatype.uuid()
         let error = common.handleError(errorExpected)
         expect(error).toEqual(errorExpected)
     })
