@@ -18,17 +18,17 @@ jest.mock('../../../lib/common', () => ({
     handleError: jest.fn()
 }))
 jest.mock('request-promise-native', () => ({ get: jest.fn() }))
-jest.mock('uuid/v1', () => jest.fn())
+jest.mock('uuid', () => ({v1: jest.fn()}))
 
 const authenticate = require('../../../lib/authentication'),
-    faker = require('faker'),
+    { faker } = require('@faker-js/faker'),
     request = require('request-promise-native'),
     common = require('../../../lib/common'),
-    uuid = require('uuid/v1')
+    uuid = require('uuid')
 
 describe('authenticate should', () => {    
     beforeEach(() => {
-        uuid.mockReturnValue(faker.random.uuid())
+        uuid.v1.mockReturnValue(faker.datatype.uuid())
         request.get.mockClear()
         request.get.mockImplementation(() => 
         `
@@ -50,11 +50,11 @@ describe('authenticate should', () => {
 
     test('request get is called with correct query parameters if all passed', async () => {
         let params = {
-            email: faker.random.uuid(),
-            password: faker.random.uuid(),
-            uuid: faker.random.uuid(),
-            country: faker.random.uuid(),
-            action: faker.random.uuid()
+            email: faker.datatype.uuid(),
+            password: faker.datatype.uuid(),
+            uuid: faker.datatype.uuid(),
+            country: faker.datatype.uuid(),
+            action: faker.datatype.uuid()
         }
 
         await authenticate(params)
@@ -79,8 +79,8 @@ describe('authenticate should', () => {
     })
 
     test('request get is called with default parameter for uuid', async () => {
-        let expected = faker.random.uuid()
-        uuid.mockReturnValue(expected)
+        let expected = faker.datatype.uuid()
+        uuid.v1.mockReturnValue(expected)
 
         authenticate({})
 
@@ -88,18 +88,20 @@ describe('authenticate should', () => {
     })
 
     test('request get response is not Ok', async () => {
-        let expected = faker.random.uuid()
+        let expected = faker.datatype.uuid()
         common.handleError.mockReturnValue(expected)
         request.get.mockImplementation(() => 'Fail\n')
         expect(authenticate({})).rejects.toEqual(expected)
     })
 
     test('request get response should return mapped object', async () => {
-        let authToken= faker.random.uuid()
-        let measure= faker.random.uuid()
-        let displayName= faker.random.uuid()
-        let userId= faker.random.uuid()
-        let facebookConnected= faker.random.uuid()
+        let facebookConnected= faker.datatype.uuid()
+        let authToken= faker.datatype.uuid()
+        let measure= faker.datatype.uuid()
+        let displayName= faker.datatype.uuid()
+        let userId= faker.datatype.uuid()
+        let facebookConnected= faker.datatype.uuid()
+        let secureToken= faker.datatype.uuid()
         request.get.mockImplementation(() => `
         OK\n
         authToken=${authToken}\n

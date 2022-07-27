@@ -9,7 +9,7 @@ jest.mock('../../../lib/common', () => ({
 jest.mock('request-promise-native', () => ({ get: jest.fn() }))
 
 const workouts = require('../../../lib/workouts'),
-    faker = require('faker'),
+    { faker } = require('@faker-js/faker'),
     request = require('request-promise-native'),
     common = require('../../../lib/common')
 
@@ -32,13 +32,13 @@ describe('workouts should', () => {
 
     test('request get is called with correct query parameters if all passed', async () => {
         let params = {
-            authToken: faker.random.uuid(),
-            fields: faker.random.uuid(),
-            maxResults: faker.random.uuid(),
-            deflate: faker.random.uuid(),
-            compression: faker.random.uuid(),
-            before: faker.random.uuid(),
-            after: faker.random.uuid()
+            authToken: faker.datatype.uuid(),
+            fields: faker.datatype.uuid(),
+            maxResults: faker.datatype.uuid(),
+            deflate: faker.datatype.uuid(),
+            compression: faker.datatype.uuid(),
+            before: faker.datatype.uuid(),
+            after: faker.datatype.uuid()
         }
 
         await workouts(params)
@@ -47,7 +47,7 @@ describe('workouts should', () => {
     })
 
     test('request get returns parsed json result', async () => {
-        let expectedResult = { something : faker.random.uuid() }
+        let expectedResult = { something : faker.datatype.uuid() }
         request.get.mockReturnValue(Promise.resolve(expectedResult))
         let result = await workouts({})
         expect(result).toEqual(expectedResult)

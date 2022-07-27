@@ -1,5 +1,5 @@
 # ![logomakr_7drp6q](https://cloud.githubusercontent.com/assets/3071208/22858608/36797c5e-f088-11e6-9821-ad926355ff05.png)
-[![Build Status](https://travis-ci.org/kanekotic/endomondo-unofficial-api.svg?branch=master)](https://travis-ci.org/kanekotic/endomondo-unofficial-api)
+[![Build Status](https://img.shields.io/github/workflow/status/kanekotic/endomondo-unofficial-api/Build%20%26%20Publish)](https://travis-ci.org/kanekotic/endomondo-unofficial-api)
 [![Coverage Status](https://coveralls.io/repos/github/kanekotic/endomondo-unofficial-api/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/endomondo-unofficial-api?branch=master)
 [![npm](https://img.shields.io/npm/dt/endomondo-unofficial-api.svg)](https://github.com/kanekotic/endomondo-unofficial-api)
 [![GitHub license](https://img.shields.io/github/license/kanekotic/endomondo-unofficial-api.svg)](https://github.com/kanekotic/endomondo-unofficial-api/blob/master/LICENSE)
