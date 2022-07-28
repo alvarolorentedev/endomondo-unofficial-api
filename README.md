@@ -1,6 +1,6 @@
 # ![logomakr_7drp6q](https://cloud.githubusercontent.com/assets/3071208/22858608/36797c5e-f088-11e6-9821-ad926355ff05.png)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Build Status](https://img.shields.io/github/workflow/status/kanekotic/endomondo-unofficial-api/Build%20%26%20Publish)](https://travis-ci.org/kanekotic/endomondo-unofficial-api)
 [![Coverage Status](https://coveralls.io/repos/github/kanekotic/endomondo-unofficial-api/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/endomondo-unofficial-api?branch=master)
@@ -191,6 +191,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.toranders.com"><img src="https://avatars.githubusercontent.com/u/422309?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tor Anders Johansen</b></sub></a><br /><a href="https://github.com/kanekotic/endomondo-unofficial-api/commits?author=toralux" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/marcpoppleton"><img src="https://avatars.githubusercontent.com/u/10866813?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marc Poppleton</b></sub></a><br /><a href="https://github.com/kanekotic/endomondo-unofficial-api/commits?author=marcpoppleton" title="Code">💻</a></td>
   </tr>
 </table>
 
