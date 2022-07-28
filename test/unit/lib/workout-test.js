@@ -86,8 +86,8 @@ describe('workout should', () => {
 
     test('request delete is called with correct query parameters if all passed', async () => {
         let params = {
-            authToken: faker.random.uuid(),
-            workoutId: faker.random.uuid()
+            authToken: faker.datatype.uuid(),
+            workoutId: faker.datatype.uuid()
         }
 
         await workout.remove(params)
