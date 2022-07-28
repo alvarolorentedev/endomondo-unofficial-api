@@ -10,10 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@master
-        with:
-          node-version: 14
-          fetch-depth: 0
-          ref: main
       - name: Cache ✨
         uses: actions/cache@v2
         id: cache
