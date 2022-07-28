@@ -110,23 +110,6 @@ workoutGet({authToken: token, workoutId: workoutId})
 
 ```
 
-the complete set of parameters are determined by:
-```
-{
-    workoutId: params.id,
-    sport: params.sport || 0,
-    duration: params.duration || 0,
-    gzip: params.gzip || true,
-    audioMessage: params.audioMessage || false,
-    goalType: params.goalType || 'BASIC',
-    extendedResponse: params.extendedResponse || undefined,
-    calories: params.calories || undefined,
-    hydration: params.hydration || undefined
-}
-```
-
-The result of the promise will be if failed the error that caused it and if success an result object that is quite complex to describe just try it ;) .
-
 ### Workout (set)
 
 Set (or create) a specific workout. The next snippet describes an example of the call:
@@ -168,6 +151,39 @@ The result of the promise will be if failed the error that caused it and if succ
 ```
 { workoutId: <workoutId> }
 ```
+
+### Workout (remove)
+
+Get a specific workout. The next snippet describes an example of the call:
+
+```js
+var workoutRemove = require('endomondo-unofficial-api').workout.remove
+
+var token = 'authToken'
+var workoutId = 'workoutId'
+
+workoutRemove({authToken: token, workoutId: workoutId})
+    .then((result) => { console.log(result) })
+    .catch((result) => console.log(result))
+
+```
+
+the complete set of parameters are determined by:
+```
+{
+    workoutId: params.id,
+    sport: params.sport || 0,
+    duration: params.duration || 0,
+    gzip: params.gzip || true,
+    audioMessage: params.audioMessage || false,
+    goalType: params.goalType || 'BASIC',
+    extendedResponse: params.extendedResponse || undefined,
+    calories: params.calories || undefined,
+    hydration: params.hydration || undefined
+}
+```
+
+The result of the promise will be if failed the error that caused it and if success a result object that is quite complex to describe just try it ;).
 
 ## Thanks
 
