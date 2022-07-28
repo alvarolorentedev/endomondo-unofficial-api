@@ -12,8 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-          ref: master
+          token: ${{ secrets.REPO_TOKEN }}
       - uses: actions/setup-node@master
       - name: install upgrade
         run: yarn upgrade --latest
