@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - run: ls -a
+      - run: cat .git/HEAD
       - uses: actions/setup-node@master
       - name: Cache ✨
         uses: actions/cache@v2
