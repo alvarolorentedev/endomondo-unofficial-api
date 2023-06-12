@@ -50,9 +50,9 @@ describe('workout should', () => {
 
     test('request get is called with correct query parameters if all passed', async () => {
         let params = {
-            authToken: faker.datatype.uuid(),
-            workoutId: faker.datatype.uuid(),
-            fields: faker.datatype.uuid(),
+            authToken: faker.string.uuid(),
+            workoutId: faker.string.uuid(),
+            fields: faker.string.uuid(),
         }
 
         await workout.get(params)
@@ -68,7 +68,7 @@ describe('workout should', () => {
     })
 
     test('request get returns json result', async () => {
-        let expectedResult = { something : faker.datatype.uuid() }
+        let expectedResult = { something : faker.string.uuid() }
         request.get.mockReturnValue(Promise.resolve(expectedResult))
         let result = await workout.get({})
         expect(result).toEqual(expectedResult)
@@ -86,8 +86,8 @@ describe('workout should', () => {
 
     test('request delete is called with correct query parameters if all passed', async () => {
         let params = {
-            authToken: faker.datatype.uuid(),
-            workoutId: faker.datatype.uuid()
+            authToken: faker.string.uuid(),
+            workoutId: faker.string.uuid()
         }
 
         await workout.remove(params)
@@ -104,9 +104,9 @@ describe('workout should', () => {
 
     test('request post is called with correct url', async () => {
         let params = {
-            authToken: faker.datatype.uuid(),
-            duration: faker.datatype.uuid(),
-            workoutId: faker.datatype.uuid(),
+            authToken: faker.string.uuid(),
+            duration: faker.string.uuid(),
+            workoutId: faker.string.uuid(),
             points: []
         }
         await workout.set(params)
@@ -123,8 +123,8 @@ describe('workout should', () => {
 
     test('request post is called with single parameter obtained from time and distance', async () => {
         let params = {
-            time: faker.datatype.number(200),
-            distance: faker.datatype.number(200),
+            time: faker.number.int(200),
+            distance: faker.number.int(200),
         },
         formatedTime = moment.utc(params.time).format('YYYY-MM-DD hh:mm:ss UTC')
         expectedPoints = `${formatedTime};3;;;${params.distance.toFixed(2)};;;\n`
@@ -136,18 +136,18 @@ describe('workout should', () => {
     test('request post is called with correct query parameters if all passed', async () => {
         let point = {
             time: faker.date.recent(),
-            inst: faker.datatype.number(20),
-            distance: faker.datatype.number(200),
-            speed: faker.datatype.number(200),
-            latitude: faker.address.latitude(),
-            longitude: faker.address.longitude(),
-            altitude: faker.datatype.number(200),
-            heartRate: faker.datatype.number(200),
+            inst: faker.number.int(20),
+            distance: faker.number.int(200),
+            speed: faker.number.int(200),
+            latitude: faker.location.latitude(),
+            longitude: faker.location.longitude(),
+            altitude: faker.number.int(200),
+            heartRate: faker.number.int(200),
         },
         params = {
-            authToken: faker.datatype.uuid(),
-            duration: faker.datatype.uuid(),
-            workoutId: faker.datatype.uuid(),
+            authToken: faker.string.uuid(),
+            duration: faker.string.uuid(),
+            workoutId: faker.string.uuid(),
             points: [point]
         },
         formatedTime = moment.utc(point.time).format('YYYY-MM-DD hh:mm:ss UTC')
@@ -164,13 +164,13 @@ describe('workout should', () => {
     test('request post is called with some parameters missing', async () => {
         let point = {
             time: faker.date.recent(),
-            inst: faker.datatype.number(20),
-            distance: faker.datatype.number(200)
+            inst: faker.number.int(20),
+            distance: faker.number.int(200)
         },
         params = {
-            authToken: faker.datatype.uuid(),
-            duration: faker.datatype.uuid(),
-            workoutId: faker.datatype.uuid(),
+            authToken: faker.string.uuid(),
+            duration: faker.string.uuid(),
+            workoutId: faker.string.uuid(),
             points: [point]
         },
         formatedTime = moment.utc(point.time).format('YYYY-MM-DD hh:mm:ss UTC')
@@ -187,9 +187,9 @@ describe('workout should', () => {
 
     test('request post returns result with correct value', async () => {
         let params = {
-            workoutId: faker.datatype.number(30000),
-            time: faker.datatype.number(200),
-            distance: faker.datatype.number(200),
+            workoutId: faker.number.int(30000),
+            time: faker.number.int(200),
+            distance: faker.number.int(200),
         }
         request.post.mockReturnValue('OK\n')
 
@@ -199,11 +199,11 @@ describe('workout should', () => {
 
     test('request post is returns error in case of fail request', async () => {
         let params = {
-            workoutId: faker.datatype.number(30000),
-            time: faker.datatype.number(200),
-            distance: faker.datatype.number(200),
+            workoutId: faker.number.int(30000),
+            time: faker.number.int(200),
+            distance: faker.number.int(200),
         },
-        expected = faker.datatype.uuid()
+        expected = faker.string.uuid()
         common.handleError.mockReturnValue(expected)
         request.post.mockReturnValue('Fail\n')
 

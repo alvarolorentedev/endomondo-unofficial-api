@@ -38,7 +38,7 @@ describe('common should', () => {
     })
 
     test('handle error should use same error than passed', async () => {
-        let errorExpected = faker.datatype.uuid()
+        let errorExpected = faker.string.uuid()
         let error = common.handleError(errorExpected)
         expect(error).toEqual(errorExpected)
     })

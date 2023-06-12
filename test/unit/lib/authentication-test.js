@@ -28,7 +28,7 @@ const authenticate = require('../../../lib/authentication'),
 
 describe('authenticate should', () => {    
     beforeEach(() => {
-        uuid.v1.mockReturnValue(faker.datatype.uuid())
+        uuid.v1.mockReturnValue(faker.string.uuid())
         request.get.mockClear()
         request.get.mockImplementation(() => 
         `
@@ -50,11 +50,11 @@ describe('authenticate should', () => {
 
     test('request get is called with correct query parameters if all passed', async () => {
         let params = {
-            email: faker.datatype.uuid(),
-            password: faker.datatype.uuid(),
-            uuid: faker.datatype.uuid(),
-            country: faker.datatype.uuid(),
-            action: faker.datatype.uuid()
+            email: faker.string.uuid(),
+            password: faker.string.uuid(),
+            uuid: faker.string.uuid(),
+            country: faker.string.uuid(),
+            action: faker.string.uuid()
         }
 
         await authenticate(params)
@@ -79,7 +79,7 @@ describe('authenticate should', () => {
     })
 
     test('request get is called with default parameter for uuid', async () => {
-        let expected = faker.datatype.uuid()
+        let expected = faker.string.uuid()
         uuid.v1.mockReturnValue(expected)
 
         authenticate({})
@@ -88,19 +88,19 @@ describe('authenticate should', () => {
     })
 
     test('request get response is not Ok', async () => {
-        let expected = faker.datatype.uuid()
+        let expected = faker.string.uuid()
         common.handleError.mockReturnValue(expected)
         request.get.mockImplementation(() => 'Fail\n')
         expect(authenticate({})).rejects.toEqual(expected)
     })
 
     test('request get response should return mapped object', async () => {
-        let authToken= faker.datatype.uuid()
-        let measure= faker.datatype.uuid()
-        let displayName= faker.datatype.uuid()
-        let userId= faker.datatype.uuid()
-        let facebookConnected= faker.datatype.uuid()
-        let secureToken= faker.datatype.uuid()
+        let authToken= faker.string.uuid()
+        let measure= faker.string.uuid()
+        let displayName= faker.string.uuid()
+        let userId= faker.string.uuid()
+        let facebookConnected= faker.string.uuid()
+        let secureToken= faker.string.uuid()
         request.get.mockImplementation(() => `
         OK\n
         authToken=${authToken}\n

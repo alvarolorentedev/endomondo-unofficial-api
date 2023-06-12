@@ -32,13 +32,13 @@ describe('workouts should', () => {
 
     test('request get is called with correct query parameters if all passed', async () => {
         let params = {
-            authToken: faker.datatype.uuid(),
-            fields: faker.datatype.uuid(),
-            maxResults: faker.datatype.uuid(),
-            deflate: faker.datatype.uuid(),
-            compression: faker.datatype.uuid(),
-            before: faker.datatype.uuid(),
-            after: faker.datatype.uuid()
+            authToken: faker.string.uuid(),
+            fields: faker.string.uuid(),
+            maxResults: faker.string.uuid(),
+            deflate: faker.string.uuid(),
+            compression: faker.string.uuid(),
+            before: faker.string.uuid(),
+            after: faker.string.uuid()
         }
 
         await workouts(params)
@@ -47,7 +47,7 @@ describe('workouts should', () => {
     })
 
     test('request get returns parsed json result', async () => {
-        let expectedResult = { something : faker.datatype.uuid() }
+        let expectedResult = { something : faker.string.uuid() }
         request.get.mockReturnValue(Promise.resolve(expectedResult))
         let result = await workouts({})
         expect(result).toEqual(expectedResult)
