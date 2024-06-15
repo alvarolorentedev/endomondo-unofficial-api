@@ -37,7 +37,7 @@
     "moment": "2.30.1",
     "request": "^2.88.2",
     "request-promise-native": "1.0.9",
-    "uuid": "9.0.1"
+    "uuid": "10.0.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
