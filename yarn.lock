@@ -291,10 +291,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@faker-js/faker@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-9.0.0.tgz#3cc9af90c784d1081ebd0d85ea10bc648fc5c981"
-  integrity sha512-dTDHJSmz6c1OJ6HO7jiUiIb4sB20Dlkb3pxYsKm0qTXm2Bmj97rlXIhlvaFsW2rvCi+OLlwKLVSS6ZxFUVZvjQ==
+"@faker-js/faker@^9.0.1":
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-9.0.1.tgz#5e201ffc4524d00a200c648d2be55be6e25b3c3e"
+  integrity sha512-4mDeYIgM3By7X6t5E6eYwLAa+2h4DeZDF7thhzIg6XB76jeEvMwadYAMCFJL/R4AnEBcAUO9+gL0vhy3s+qvZA==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -620,9 +620,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/node@*":
-  version "22.5.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.4.tgz#83f7d1f65bc2ed223bdbf57c7884f1d5a4fa84e8"
-  integrity sha512-FDuKUJQm/ju9fT/SeX/6+gBzoPzlVCzfzmGkwKvRHQVxi4BntVbyIwf6a4Xn62mrvndLiml6z/UBXIdEVjQLXg==
+  version "22.5.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.5.5.tgz#52f939dd0f65fc552a4ad0b392f3c466cc5d7a44"
+  integrity sha512-Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==
   dependencies:
     undici-types "~6.19.2"
 
@@ -866,9 +866,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001646:
-  version "1.0.30001660"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001660.tgz#31218de3463fabb44d0b7607b652e56edf2e2355"
-  integrity sha512-GacvNTTuATm26qC74pt+ad1fW15mlQ/zuTzzY1ZoIzECTP8HURDfF43kNxPgf7H1jmelCBQTTbBNxdSXOA7Bqg==
+  version "1.0.30001662"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001662.tgz#3574b22dfec54a3f3b6787331da1040fe8e763ec"
+  integrity sha512-sgMUVwLmGseH8ZIrm1d51UbrhqMCH3jvS7gF/M6byuHOnKyLOBL7W8yz5V02OHwgLGA36o/AFhWzzh4uc5aqTA==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1053,9 +1053,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.5.4:
-  version "1.5.22"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.22.tgz#5ae58990a35391bad7605742e52855a0f281ef82"
-  integrity sha512-tKYm5YHPU1djz0O+CGJ+oJIvimtsCcwR2Z9w7Skh08lUdyzXY5djods3q+z2JkWdb7tCcmM//eVavSRAiaPRNg==
+  version "1.5.27"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.27.tgz#5203ce5d6054857d84ba84d3681cbe59132ade78"
+  integrity sha512-o37j1vZqCoEgBuWWXLHQgTN/KDKe7zwpiY5CPeq2RvUqOyJw9xnrULzZAEVQ5p4h+zjMk7hgtOoPdnLxr7m/jw==
 
 emittery@^0.13.1:
   version "0.13.1"
