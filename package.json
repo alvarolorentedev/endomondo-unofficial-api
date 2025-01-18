@@ -40,7 +40,7 @@
     "uuid": "11.0.5"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.3.0",
+    "@faker-js/faker": "^9.4.0",
     "codecov": "3.8.3",
     "jest": "29.7.0"
   },
